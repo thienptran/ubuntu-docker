@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  test:
+    image: ubuntu_dev:latest
+    container_name: cu
+    volumes:
+      - ./.:/data:Z
+    command: bash
+    tty: true
