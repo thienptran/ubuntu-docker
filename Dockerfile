@@ -11,8 +11,9 @@ RUN apt-get update && \
     rm -rf /var/cache/oracle* && \
     apt-get clean
     
-ARG JAVA_HOME=/usr/lib/jvm/java-8-oracle/jre
+ARG JAVA_HOME=/usr/lib/jvm/java-8-oracle
 ENV JAVA_HOME=$JAVA_HOME
+ENV JRE_HOME=$JAVA_HOME/jre
 
 ARG MAVEN_VERSION=3.5.4
 ARG BASE_URL=http://www-us.apache.org/dist/maven/maven-3/${MAVEN_VERSION}/binaries
